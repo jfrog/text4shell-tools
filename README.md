@@ -60,9 +60,9 @@ The tool may be configured for additional use cases using the following command 
 
 | Flag                  | Default value        | Use                                                          |
 | --------------------- | -------------------- | ------------------------------------------------------------ |
-| `--class_regex`       | `(.*StringSubstitutor|.*StringLookup)`       | Regular expression for required class name                   |
-| `--method_regex`      | `(lookup|replace|replaceIn)`                 | Regular expression for required method name                  |
-| `--quickmatch_string` | `(StringLookup|StringSubstitutor)`                | Pre-condition for file analysis: .jar files not containing the specified regex will be ignored |
+| `--class_regex`       | (.*StringSubstitutor&#124;.*StringLookup)       | Regular expression for required class name                   |
+| `--method_regex`      | (lookup&#124;replace&#124;replaceIn)                 | Regular expression for required method name                  |
+| `--quickmatch_string` | (StringLookup&#124;StringSubstitutor)                | Pre-condition for file analysis: .jar files not containing the specified regex will be ignored |
 | `--class_existence`   | Not set              | When not set, look for calls to class::method as  specified by regexes. When set, `--method_regex` is ignored, and the tool will look for *existence* of classes specified by `--class_regex` in the jar. |
 | `--no_quickmatch`     | Not set              | When set, the value of `--quickmatch_string` is ignored and all jar files are analyzed |
 | `--caller_block`      | .*org/apache/commons/text | If caller class matches this regex, it will *not* be displayed |
