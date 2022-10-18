@@ -2,7 +2,7 @@
 
 ### Overview
 
-CVE-2022-33980 may pose a serious threat to a wide range of Java-based applications. The important questions a developer may ask in this context are:
+CVE-2022-42889 may pose a serious threat to a wide range of Java-based applications. The important questions a developer may ask in this context are:
 
 ### 1. Does my code include `commons-text`? Which versions?
 
