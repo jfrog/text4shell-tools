@@ -74,7 +74,7 @@ def jar_quickmatch(filename, match_string):
             classes = [name for name in jarfile.namelist() if name.endswith(".class")]
             for c in classes:
                 classfile_content = jarfile.read(c)
-                if match_string in classfile_content:
+                if re.search(match_string, classfile_content):
                     return True
             return False
     except (IOError, BadZipFile):
@@ -229,7 +229,7 @@ def run_scanner(
     # if caller class matches this regex, it will *not* be displayed
     caller_block=".*org/apache/commons/text",
     # checking for existence of this string in classes unless no_quickmatch
-    quickmatch_string="StringSubstitutor",
+    quickmatch_string="(StringLookup|StringSubstitutor)",
     # not set - looking for calls to specified methods, set - looking for existence of classes
     class_existence=False,
     # when set, do not do quick match
